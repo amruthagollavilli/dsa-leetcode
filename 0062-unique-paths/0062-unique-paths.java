@@ -31,11 +31,11 @@ class Solution {
             return dp[i][j];
 
         // Calculate paths
-        int up = solve(i - 1, j, dp);
-        int left = solve(i, j - 1, dp);
+        int down = solve(i - 1, j, dp);
+        int right = solve(i, j - 1, dp);
 
         // Store answer
-        dp[i][j] = up + left;
+        dp[i][j] = down + right;
 
         return dp[i][j];
     }
