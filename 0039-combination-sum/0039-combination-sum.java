@@ -18,6 +18,9 @@ class Solution {
                  return;
                  }
         for(int i = index ; i < candidates.length ; i++ ){
+            if(i > index && candidates[i] == candidates[i-1]){
+                      continue;
+                      }
              curr.add(candidates[i]);
              dfs(i,candidates,target - candidates[i]);
              curr.remove(curr.size() - 1);
